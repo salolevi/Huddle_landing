@@ -18,9 +18,19 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url("../images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
     background-color: var(--violet);
     text-align: center;
+    align-items: center;
     box-sizing: border-box;
+    justify-content: center;
+}
+
+.main-content__wrapper {
+
 }
 
 .icons {
@@ -38,6 +48,12 @@ body {
 .bg-image {
     position: absolute;
     z-index: -1;
+    width: 100%;
+}
+
+.bg-image img {
+    width: 100%;
+    object-fit: cover;
 }
 
 .illustrations-container {
@@ -72,14 +88,28 @@ body {
     opacity: .9;
     margin-bottom: 20px;
     padding: 0 20px;
+    max-width: 500px;
 }
 
 .btn-container {
     font-weight: bold;
 }
 
+.btn-container:hover > .btn {
+    background-color: var(--soft-magenta);
+    color: #fff;
+}
+
+.btn-container:active {
+    opacity: .8;
+}
+
+
 .btn {
+    box-sizing: border-box;
+    transition: background-color .3s;
     width: 50%;
+    cursor: pointer;
     height: 100%;
     padding: 13px 0;
     border-radius: 9999px;
@@ -91,4 +121,15 @@ body {
 
 .socials {
     display: flex;
+    max-height: 50px;
+    justify-content: space-around;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+
 }
